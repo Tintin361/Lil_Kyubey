@@ -54,17 +54,6 @@ class Basic(commands.Cog):
         # Envoie un message si le bot est mentionné
         if self.bot.user.mentioned_in(message) and message.mention_everyone == False:
             await message.channel.send(f"{message.author.mention}, si tu veux voir la liste des commandes, tape **/help**.")
-            
-    # Affiche la version du Bot
-    @app_commands.command(name="version", description="Affiche la version du NekoBot.")
-    async def ver(self, interaction: discord.Integration) -> None:
-        await interaction.response.send_message(f"Je suis en en version **{var.version}**.")
-        
-    # Envoie le Lien du Github du Bot
-    @app_commands.command(name="github", description="Récupère le lien mon repo Github.")
-    async def git(self, interaction: discord.Interaction) -> None:
-        await interaction.response.send_message(f"Lien du repo: https://github.com/Tintin361/Lil_Kyubey")
-
     
 async def setup(bot):
     await bot.add_cog(Basic(bot))

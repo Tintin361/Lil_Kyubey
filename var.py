@@ -1,6 +1,6 @@
 from typing import Literal
 
-version = "0.4.0"
+version = "0.4.1"
 
 # Liste des valeurs qui est possible d'entrer
 file_type = Literal['image', 'gif']
